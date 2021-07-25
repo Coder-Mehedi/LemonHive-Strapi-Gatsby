@@ -1,10 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import Nav from "./nav";
-import Seo from "./seo";
+import React, { ReactNode } from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Nav from './nav';
+import Seo from './seo';
 
-const Layout = ({ children, seo }) => (
+interface Props {
+  children: ReactNode;
+  seo?: any;
+}
+
+const Layout = ({ children, seo }: Props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,9 +34,5 @@ const Layout = ({ children, seo }) => (
     )}
   />
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;

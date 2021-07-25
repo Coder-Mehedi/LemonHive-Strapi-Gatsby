@@ -1,0 +1,24 @@
+$active: #ffdd00;
+.nav {
+  height: 100px;
+
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .navItem {
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 7.5px;
+
+      &:hover {
+        color: $active;
+      }
+    }
+    a.active {
+      color: $active;
+    }
+  }
+}
