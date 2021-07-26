@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
-// @ts-ignore
 import logo from '../../assets/images/logo.png';
-// @ts-ignore
 import * as styles from './styles.module.scss';
 
 const Nav = () => (

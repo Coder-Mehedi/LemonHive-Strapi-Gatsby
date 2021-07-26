@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
+import '../assets/scss/variables.scss';
 import '../assets/scss/main.scss';
-// @ts-ignore
 import * as styles from './styles.module.scss';
-// @ts-ignore
 import bannerImg from '../assets/images/banner-img.png';
-// @ts-ignore
 import bannerCircle from '../assets/images/banner-circle.png';
 import Button from '../components/_root/button';
 import SectionTitle from '../components/section-title';
