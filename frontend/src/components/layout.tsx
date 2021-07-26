@@ -25,7 +25,7 @@ const Layout = ({ children, seo }: Props) => (
         }
       }
     `}
-    render={(data) => (
+    render={() => (
       <>
         <Seo seo={seo} />
         <Nav />

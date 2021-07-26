@@ -4,13 +4,13 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background: #283849;
   margin: 0 auto;
+  min-height: calc(100vh);
 
   .contentArea {
     max-width: 507px;
     h1 {
-      color: white;
+      color: $primaryText;
       font-size: 45px;
       span {
         font-weight: 700;
@@ -18,7 +18,7 @@
     }
     p {
       font-size: 17px;
-      color: white;
+      color: $primaryText;
       margin: 20px 0 50px 0;
     }
   }
@@ -33,6 +33,7 @@
       right: 0;
       border: 6px solid white;
       border-radius: 25px;
+      top: 50px;
     }
     .circle {
       position: absolute;
@@ -41,13 +42,31 @@
     }
   }
 }
-.services {
+section.services {
   background: #324253;
-  min-height: 100vh;
+  min-height: 585px;
   display: flex;
   align-items: center;
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+  .serviceItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-.container {
-  max-width: 1170px;
-  margin: 0 auto;
+
+section.latestProject {
+  min-height: 832px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  .sliderImg {
+    border-radius: 15px;
+  }
+  .sliderArea {
+    width: 100%;
+  }
 }

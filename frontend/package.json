@@ -26,9 +26,11 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
-    "sass": "^1.36.0"
+    "sass": "^1.36.0",
+    "swiper": "^6.8.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/react-helmet": "^6.1.2",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",

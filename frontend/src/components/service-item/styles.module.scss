@@ -1,0 +1,40 @@
+.serviceContainer {
+  flex: 1 1 25%;
+  h3 {
+    font-size: 18px;
+    color: $primaryText;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    &:hover {
+      color: $active;
+    }
+  }
+  p {
+    color: $secondaryText;
+    margin-bottom: 25px;
+  }
+  a {
+    text-decoration: none;
+    color: $primaryText;
+    &::after {
+      content: '';
+      height: 2px;
+      width: 0px;
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      background: $active;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $active;
+      position: relative;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

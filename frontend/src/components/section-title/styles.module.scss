@@ -1,8 +1,21 @@
 .sectionTitle {
-  color: #ffdd00;
+  color: $secondaryTheme;
   font-weight: 700;
+  text-transform: capitalize;
 }
 .primaryTitle {
   font-size: 45px;
   color: white;
+  line-height: 50px;
+  margin: 10px 0;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.secondaryTitle {
+  font-size: 15px;
+  color: $secondaryText;
+  padding-bottom: 50px;
+}
+.center {
+  text-align: center;
 }
