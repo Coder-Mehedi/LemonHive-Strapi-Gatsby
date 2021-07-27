@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-strapi",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A simple gatsby and strapi project",
+  "version": "1.0",
+  "author": "Mehedi Hasan <mehedi5051@gmail.com>",
   "dependencies": {
     "@blocks/kit": "0.0.28",
     "@emotion/core": "^10.0.28",

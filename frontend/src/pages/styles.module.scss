@@ -1,3 +1,7 @@
+.fullContainer {
+  width: 100vw;
+}
+
 .banner {
   width: 1170px;
   display: flex;
@@ -6,6 +10,12 @@
   position: relative;
   margin: 0 auto;
   min-height: calc(100vh);
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .contentArea {
     max-width: 507px;
@@ -69,4 +79,10 @@ section.latestProject {
   .sliderArea {
     width: 100%;
   }
+}
+section.career {
+  background: #324253;
+  min-height: 605px;
+  display: flex;
+  align-items: center;
 }

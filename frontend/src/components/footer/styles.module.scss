@@ -1,0 +1,33 @@
+.footer {
+  height: 344px;
+  .footerContent {
+    background-image: url('../../assets/images/footerBg.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 423px auto;
+    gap: 78px;
+    p {
+      color: $secondaryText;
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 145px;
+      a {
+        text-decoration: none;
+        color: $secondaryText;
+        &:hover {
+          color: $active;
+        }
+      }
+    }
+  }
+}

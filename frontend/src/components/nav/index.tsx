@@ -22,9 +22,8 @@ const Nav = () => (
     `}
     render={(data) => (
       <nav className={styles.nav}>
-        <div>
-          <img src={logo} />
-        </div>
+        <img src={logo} alt='logo' />
+
         <div className={styles.navItem}>
           <Link to='/' activeClassName={styles.active}>
             Home

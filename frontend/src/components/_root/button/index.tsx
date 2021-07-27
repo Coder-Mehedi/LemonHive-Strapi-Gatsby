@@ -10,4 +10,8 @@ const Button = ({ children }: Props) => {
   return <button className={styles.button}>{children}</button>;
 };
 
+Button.Action = ({ children }: Props) => {
+  return <button className={styles.actionButton}>{children}</button>;
+};
+
 export default Button;

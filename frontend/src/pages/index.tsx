@@ -1,28 +1,18 @@
 import React from 'react';
-// Import Swiper styles
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
+
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
-import '../assets/scss/variables.scss';
 import '../assets/scss/main.scss';
 import * as styles from './styles.module.scss';
 import bannerImg from '../assets/images/banner-img.png';
 import bannerCircle from '../assets/images/banner-circle.png';
-import sliderImg from '../assets/images/PathDxp-Design-v2.png';
 import codeIcon from '../assets/icons/code.svg';
-import pencilAndRuler from '../assets/icons/pencil-and-ruler.svg';
 import Button from '../components/_root/button';
 import SectionTitle from '../components/section-title';
 import ServiceItem from '../components/service-item';
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import Swiper core and required modules
-import SwiperCore, { Pagination } from 'swiper/core';
-// install Swiper modules
-SwiperCore.use([Pagination]);
+import Footer from '../components/footer';
+import ProjectSlider from '../components/project-slider';
+import OpenJobsSlider from '../components/open-jobs-slider';
 
 const IndexPage = () => {
   const data = useStaticQuery(query);
@@ -30,19 +20,21 @@ const IndexPage = () => {
   return (
     <Layout seo={data.strapiHomepage.seo}>
       <section className={styles.banner}>
-        <div className={styles.contentArea}>
-          <h1>
-            We Help Awesome Brands, <span>Find Brilliant Customers</span>
-          </h1>
-          <p>
-            Lemon Hive is a marketing agency for ambitious companies who want to
-            accelerate their growth.
-          </p>
-          <Button>About Us</Button>
-        </div>
-        <div className={styles.bannerImg}>
-          <img src={bannerImg} alt='' className={styles.topImage} />
-          <img src={bannerCircle} alt='' className={styles.circle} />
+        <div className={styles.hero}>
+          <div className={styles.contentArea}>
+            <h1>
+              We Help Awesome Brands, <span>Find Brilliant Customers</span>
+            </h1>
+            <p>
+              Lemon Hive is a marketing agency for ambitious companies who want
+              to accelerate their growth.
+            </p>
+            <Button>About Us</Button>
+          </div>
+          <div className={styles.bannerImg}>
+            <img src={bannerImg} alt='' className={styles.topImage} />
+            <img src={bannerCircle} alt='' className={styles.circle} />
+          </div>
         </div>
       </section>
       <section className={styles.services}>
@@ -72,31 +64,18 @@ const IndexPage = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit a aliquam
           morbi.
         </SectionTitle.Secondary>
-        <div className={styles.sliderArea}>
-          <Swiper
-            pagination={{ clickable: true }}
-            className='mySwiper'
-            slidesPerView={3}
-            spaceBetween={30}
-
-            // centerInsufficientSlides
-          >
-            <SwiperSlide>
-              <img src={sliderImg} className={styles.sliderImg} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={sliderImg} className={styles.sliderImg} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={sliderImg} className={styles.sliderImg} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={sliderImg} className={styles.sliderImg} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={sliderImg} className={styles.sliderImg} />
-            </SwiperSlide>
-          </Swiper>
+        <div className={styles.fullContainer}>
+          <ProjectSlider />
+        </div>
+      </section>
+      <section className={styles.career}>
+        <div className='container'>
+          <SectionTitle center>career_</SectionTitle>
+          <SectionTitle.Primary center>open job position</SectionTitle.Primary>
+          <SectionTitle.Secondary center>
+            Want to join our team, please submit your documents
+          </SectionTitle.Secondary>
+          <OpenJobsSlider />
         </div>
       </section>
     </Layout>

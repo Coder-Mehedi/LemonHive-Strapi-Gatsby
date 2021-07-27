@@ -1,9 +1,13 @@
-.button {
+.button,
+.actionButton {
   outline: none;
   border: none;
-  background: yellow;
+  background: $buttonBackground;
   padding: 12px 40px;
   border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
+}
+.actionButton {
+  padding: 15px;
 }

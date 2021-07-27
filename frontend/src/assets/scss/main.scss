@@ -18,3 +18,35 @@ body {
 // flex-direction: column;
 // align-items: center;
 // }
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.swiper-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+  display: flex;
+  height: 21px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: $active;
+  border: 6px solid $deepDarkBackground;
+  box-shadow: 0 0 0 1px $active;
+}
+
+span.swiper-pagination-bullet {
+  padding: 3.5px;
+  background: rgba($active, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}

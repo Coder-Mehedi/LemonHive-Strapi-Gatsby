@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "services",
+  "collectionName": "open_jobs",
   "info": {
-    "name": "Service",
-    "description": ""
+    "name": "Open Job"
   },
   "options": {
     "increments": true,
@@ -12,11 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "job_title": {
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "richtext"
+    },
+    "deadline": {
+      "type": "date"
     }
   }
 }

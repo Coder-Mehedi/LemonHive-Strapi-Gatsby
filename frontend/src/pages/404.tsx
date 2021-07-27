@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <Layout>
     <SEO
       seo={{
-        metaTitle: "404: Not found",
-        metaDescription: "It looks like you got lost",
+        metaTitle: '404: Not found',
+        metaDescription: 'It looks like you got lost',
       }}
     />
     <h1>NOT FOUND</h1>
