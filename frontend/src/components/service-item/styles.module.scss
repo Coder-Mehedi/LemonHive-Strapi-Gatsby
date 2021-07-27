@@ -1,7 +1,12 @@
 .serviceContainer {
   flex: 1 1 25%;
+  @include for-size(mobile) {
+    flex: 1 1 100%;
+    padding: 20px;
+    text-align: center;
+  }
   h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: $primaryText;
     font-weight: 700;
     margin-top: 25px;
@@ -10,14 +15,22 @@
     &:hover {
       color: $active;
     }
+    @include for-size(mobile) {
+      margin-top: 10px;
+    }
   }
   p {
     color: $secondaryText;
     margin-bottom: 25px;
+    @include for-size(mobile) {
+      text-align: left;
+      margin-bottom: 10px;
+    }
   }
   a {
     text-decoration: none;
     color: $primaryText;
+
     &::after {
       content: '';
       height: 2px;

@@ -23,9 +23,9 @@ SectionTitle.Primary = ({ children, center }: Props) => {
 };
 SectionTitle.Secondary = ({ children, center }: Props) => {
   return (
-    <h1 className={`${styles.secondaryTitle} ${center && styles.center}`}>
+    <p className={`${styles.secondaryTitle} ${center && styles.center}`}>
       {children}
-    </h1>
+    </p>
   );
 };
 

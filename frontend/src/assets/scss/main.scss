@@ -17,6 +17,9 @@ body {
   width: 1170px;
   margin: 0 auto;
   height: 100%;
+  @include for-size(mobile) {
+    width: 100%;
+  }
 }
 
 .swiper-container {

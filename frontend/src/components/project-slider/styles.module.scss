@@ -1,0 +1,5 @@
+.sliderArea {
+  @include for-size(mobile) {
+    padding: 0 20px;
+  }
+}

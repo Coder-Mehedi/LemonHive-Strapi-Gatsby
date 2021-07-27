@@ -4,14 +4,21 @@ import { ReactNode } from 'react';
 import * as styles from './styles.module.scss';
 interface Props {
   children: ReactNode;
+  className?: string;
 }
 
-const Button = ({ children }: Props) => {
-  return <button className={styles.button}>{children}</button>;
+const Button = ({ children, className = '' }: Props) => {
+  return (
+    <button className={`${styles.button} ${className}`}>{children}</button>
+  );
 };
 
-Button.Action = ({ children }: Props) => {
-  return <button className={styles.actionButton}>{children}</button>;
+Button.Action = ({ children, className = '' }: Props) => {
+  return (
+    <button className={`${styles.actionButton} ${className}`}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

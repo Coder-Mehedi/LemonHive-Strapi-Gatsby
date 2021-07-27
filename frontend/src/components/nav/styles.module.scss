@@ -6,7 +6,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    @include for-size(mobile) {
+      width: 60%;
+      margin-left: 20px;
+    }
+  }
   .navItem {
+    @include for-size(mobile) {
+      display: none;
+    }
     a {
       text-decoration: none;
       color: white;

@@ -27,7 +27,7 @@ const IndexPage = () => {
               Lemon Hive is a marketing agency for ambitious companies who want
               to accelerate their growth.
             </p>
-            <Button>About Us</Button>
+            <Button className={styles.aboutButton}>About Us</Button>
           </div>
           <div className={styles.bannerImg}>
             <img src={bannerImg} alt='' className={styles.topImage} />
