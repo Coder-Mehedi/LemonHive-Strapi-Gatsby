@@ -4,13 +4,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
 import '../assets/scss/main.scss';
 import * as styles from './styles.module.scss';
-import bannerImg from '../assets/images/banner-img.png';
-import bannerCircle from '../assets/images/banner-circle.png';
+import bannerImg from '../assets/images/banner-image.png';
 import codeIcon from '../assets/icons/code.svg';
 import Button from '../components/_root/button';
 import SectionTitle from '../components/section-title';
 import ServiceItem from '../components/service-item';
-import Footer from '../components/footer';
 import ProjectSlider from '../components/project-slider';
 import OpenJobsSlider from '../components/open-jobs-slider';
 
@@ -33,7 +31,6 @@ const IndexPage = () => {
           </div>
           <div className={styles.bannerImg}>
             <img src={bannerImg} alt='' className={styles.topImage} />
-            <img src={bannerCircle} alt='' className={styles.circle} />
           </div>
         </div>
       </section>
@@ -64,7 +61,7 @@ const IndexPage = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit a aliquam
           morbi.
         </SectionTitle.Secondary>
-        <div className={styles.fullContainer}>
+        <div className='container'>
           <ProjectSlider />
         </div>
       </section>
@@ -104,29 +101,6 @@ const query = graphql`
         shareImage {
           localFile {
             publicURL
-          }
-        }
-      }
-    }
-    allStrapiArticle {
-      edges {
-        node {
-          strapiId
-          slug
-          title
-          category {
-            name
-          }
-
-          author {
-            name
-            picture {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(width: 30, height: 30)
-                }
-              }
-            }
           }
         }
       }

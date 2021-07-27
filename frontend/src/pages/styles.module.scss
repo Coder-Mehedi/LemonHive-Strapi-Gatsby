@@ -3,18 +3,19 @@
 }
 
 .banner {
-  width: 1170px;
+  // width: 1170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   margin: 0 auto;
-  min-height: calc(100vh);
+  // min-height: calc(100vh);
   .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 1170px;
+    margin: 0 auto;
   }
 
   .contentArea {
@@ -41,9 +42,10 @@
       z-index: 1;
       position: relative;
       right: 0;
-      border: 6px solid white;
-      border-radius: 25px;
+
       top: 50px;
+      width: 100%;
+      height: auto;
     }
     .circle {
       position: absolute;

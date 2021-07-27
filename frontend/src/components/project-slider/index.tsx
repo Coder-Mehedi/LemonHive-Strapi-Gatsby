@@ -18,28 +18,28 @@ const ProjectSlider = () => {
         spaceBetween={30}
       >
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={sliderImg} className={styles.sliderImg} />
+          <img src={sliderImg} />
         </SwiperSlide>
       </Swiper>
     </div>

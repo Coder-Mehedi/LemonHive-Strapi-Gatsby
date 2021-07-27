@@ -1,43 +1,35 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.png';
 import * as styles from './styles.module.scss';
 
 const Nav = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        strapiGlobal {
-          siteName
-        }
-        allStrapiCategory {
-          edges {
-            node {
-              slug
-              name
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <nav className={styles.nav}>
-        <img src={logo} alt='logo' />
-
-        <div className={styles.navItem}>
-          <Link to='/' activeClassName={styles.active}>
-            Home
-          </Link>
-          <Link to='/about'>About</Link>
-          <Link to='/services'>Services</Link>
-          <Link to='/projects'>Projects</Link>
-          <Link to='/teams'>Teams</Link>
-          <Link to='/blog'>Blog</Link>
-          <Link to='/contact'>Contact</Link>
-        </div>
-      </nav>
-    )}
-  />
+  <nav className={styles.nav}>
+    <img src={logo} alt='logo' />
+    <div className={styles.navItem}>
+      <Link to='/' activeClassName={styles.active}>
+        Home
+      </Link>
+      <Link activeClassName={styles.active} to='/about'>
+        About
+      </Link>
+      <Link activeClassName={styles.active} to='/services'>
+        Services
+      </Link>
+      <Link activeClassName={styles.active} to='/projects'>
+        Projects
+      </Link>
+      <Link activeClassName={styles.active} to='/teams'>
+        Teams
+      </Link>
+      <Link activeClassName={styles.active} to='/blog'>
+        Blog
+      </Link>
+      <Link activeClassName={styles.active} to='/contact'>
+        Contact
+      </Link>
+    </div>
+  </nav>
 );
 
 export default Nav;
