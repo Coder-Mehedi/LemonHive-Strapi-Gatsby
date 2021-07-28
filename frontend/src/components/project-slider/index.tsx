@@ -4,8 +4,7 @@ import 'swiper/components/pagination/pagination.min.css';
 import * as styles from './styles.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import sliderImg from '../../assets/images/PathDxp-Design-v2.png';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { useStaticQuery } from 'gatsby';
 import { IProject } from '../../utils/interfaces';
 import { getFullImageUrl } from '../../utils/getFullImageUrl';
@@ -51,6 +50,9 @@ const ProjectSlider = () => {
           )
         )}
       </Swiper>
+      <Link to='/projects' className={styles.allProjectLink}>
+        View All Projects
+      </Link>
     </div>
   );
 };

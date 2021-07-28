@@ -1,16 +1,26 @@
 import React from 'react';
-import Card from '../_root/card';
 import * as styles from './styles.module.scss';
-import teamMember1 from '../../assets/images/team-member-1.png';
+import { getFullImageUrl } from '../../utils/getFullImageUrl';
 
-const TeamMemberCard = () => {
+interface Props {
+  name: string;
+  jobRole: string;
+  avatarUrl: string;
+}
+
+const TeamMemberCard = ({ name, jobRole, avatarUrl }: Props) => {
   return (
     <div className={styles.memberCard}>
-      <img src={teamMember1} alt='' />
-      <h2>Darrell Steward</h2>
-      <p>software engineer</p>
+      <img src={getFullImageUrl(avatarUrl)} alt='' />
+      <h2>{name}</h2>
+      <p>{jobRole}</p>
       <hr />
-      <div className='socialLinks'>fb.</div>
+      <div className={styles.socialLinks}>
+        <span>fb.</span>
+        <span>in.</span>
+        <span>be.</span>
+        <span>tw.</span>
+      </div>
     </div>
   );
 };

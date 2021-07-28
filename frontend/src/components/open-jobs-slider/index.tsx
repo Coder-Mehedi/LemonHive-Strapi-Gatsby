@@ -1,13 +1,12 @@
 import React from 'react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
-import * as styles from './styles.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import Card from '../_root/card';
-import Button from '../_root/button';
+
 import { graphql, useStaticQuery } from 'gatsby';
 import { IJob } from '../../utils/interfaces';
+import JobCard from '../job-card';
 
 SwiperCore.use([Pagination]);
 
@@ -45,20 +44,7 @@ const OpenJobsSlider = () => {
       >
         {data.allStrapiJob.edges.map(({ node: job }: { node: IJob }) => (
           <SwiperSlide>
-            <Card className={styles.jobCard}>
-              <div className='jobDetails'>
-                <h3>{job.Title}</h3>
-                <p className={styles.description}>{job.Description}</p>
-                <p className={styles.deadline}>
-                  deadline: <span>{job.Deadline}</span>
-                </p>
-              </div>
-              <div className='actionButton'>
-                <Button.Action>
-                  <span uk-icon='arrow-right' className={styles.icon}></span>
-                </Button.Action>
-              </div>
-            </Card>
+            <JobCard job={job} />
           </SwiperSlide>
         ))}
       </Swiper>

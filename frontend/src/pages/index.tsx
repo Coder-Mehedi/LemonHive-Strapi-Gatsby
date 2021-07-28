@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 import '../assets/scss/main.scss';
 import * as styles from './styles.module.scss';
 import bannerImg from '../assets/images/banner-image.png';
-import codeIcon from '../assets/icons/code.svg';
 import Button from '../components/_root/button';
 import SectionTitle from '../components/section-title';
 import ServiceItem from '../components/service-item';

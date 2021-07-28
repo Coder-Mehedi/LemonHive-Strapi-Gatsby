@@ -5,7 +5,10 @@ import * as styles from './styles.module.scss';
 
 const Nav = () => (
   <nav className={styles.nav}>
-    <img src={logo} alt='logo' />
+    <Link to='/' activeClassName={styles.active}>
+      <img src={logo} alt='logo' />
+    </Link>
+
     <div className={styles.navItem}>
       <Link to='/' activeClassName={styles.active}>
         Home

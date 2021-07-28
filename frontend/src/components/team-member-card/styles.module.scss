@@ -5,10 +5,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
   &:hover {
     background: $deepDarkBackground;
     hr {
       background: $active;
+    }
+    img {
+      box-shadow: 0 0 0 5px $deepDarkBackground, 0 0 0 7px $active;
     }
   }
   img {
@@ -20,9 +24,12 @@
   h2 {
     margin-top: 20px;
     margin-bottom: 2px;
+    font-size: 1.35rem;
+    font-weight: 700;
   }
   p {
     color: $secondaryText;
+    font-size: 0.938rem;
   }
   hr {
     width: 40px;
@@ -30,5 +37,13 @@
     background: rgba($primaryText, 0.2);
     height: 2px;
     border: 0;
+  }
+  .socialLinks {
+    display: flex;
+    gap: 10px;
+    span {
+      color: $primaryText;
+      text-transform: capitalize;
+    }
   }
 }

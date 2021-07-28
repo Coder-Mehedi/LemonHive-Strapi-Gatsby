@@ -21,3 +21,11 @@ export interface IService {
     url: string;
   };
 }
+export interface ITeamMember {
+  id: string;
+  job_role: string;
+  name: string;
+  avatar: {
+    url: string;
+  };
+}

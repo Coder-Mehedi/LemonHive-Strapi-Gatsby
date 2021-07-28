@@ -4,4 +4,15 @@
 }
 .teams {
   background: $darkBackground;
+  padding: 100px 0;
+}
+.membersContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include for-size(mobile) {
+    grid-template-columns: 1fr;
+    & > * {
+      margin: 0 auto;
+    }
+  }
 }
