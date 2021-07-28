@@ -5,10 +5,15 @@ import * as styles from './styles.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
 import sliderImg from '../../assets/images/PathDxp-Design-v2.png';
+import { graphql } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
+import { IProject } from '../../utils/interfaces';
+import { getFullImageUrl } from '../../utils/getFullImageUrl';
 
 SwiperCore.use([Pagination]);
 
 const ProjectSlider = () => {
+  const data = useStaticQuery(query);
   return (
     <div className={styles.sliderArea}>
       <Swiper
@@ -38,33 +43,31 @@ const ProjectSlider = () => {
           },
         }}
       >
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImg} />
-        </SwiperSlide>
+        {data.allStrapiProject.edges.map(
+          ({ node: project }: { node: IProject }) => (
+            <SwiperSlide>
+              <img src={getFullImageUrl(project.image.url)} />
+            </SwiperSlide>
+          )
+        )}
       </Swiper>
     </div>
   );
 };
+
+const query = graphql`
+  query {
+    allStrapiProject {
+      edges {
+        node {
+          id
+          image {
+            url
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default ProjectSlider;

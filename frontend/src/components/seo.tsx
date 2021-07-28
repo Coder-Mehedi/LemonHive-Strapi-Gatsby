@@ -90,11 +90,6 @@ const SEO = ({ seo = {} }) => {
           href:
             'https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css',
         },
-        // {
-        //   rel: 'stylesheet',
-        //   href:
-        //     'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
-        // },
         {
           rel: 'stylesheet',
           href:

@@ -11,6 +11,8 @@ import SectionTitle from '../components/section-title';
 import ServiceItem from '../components/service-item';
 import ProjectSlider from '../components/project-slider';
 import OpenJobsSlider from '../components/open-jobs-slider';
+import { IService } from '../utils/interfaces';
+import { getFullImageUrl } from '../utils/getFullImageUrl';
 
 const IndexPage = () => {
   const data = useStaticQuery(query);
@@ -27,7 +29,7 @@ const IndexPage = () => {
               Lemon Hive is a marketing agency for ambitious companies who want
               to accelerate their growth.
             </p>
-            <Button className={styles.aboutButton}>About Us</Button>
+            <Button className={styles.aboutUsButton}>About Us</Button>
           </div>
           <div className={styles.bannerImg}>
             <img src={bannerImg} alt='' className={styles.topImage} />
@@ -43,14 +45,16 @@ const IndexPage = () => {
             morbi.
           </SectionTitle.Secondary>
           <div className={styles.serviceItemContainer}>
-            {data.allStrapiService.edges.map((service: any) => (
-              <ServiceItem
-                key={service.node.id}
-                serviceTitle={service.node.title}
-                description={service.node.description}
-                imageSrc={codeIcon}
-              />
-            ))}
+            {data.allStrapiService.edges.map(
+              ({ node: service }: { node: IService }) => (
+                <ServiceItem
+                  key={service.id}
+                  serviceTitle={service.title}
+                  description={service.description}
+                  imageSrc={getFullImageUrl(service.icon.url)}
+                />
+              )
+            )}
           </div>
         </div>
       </section>
@@ -87,6 +91,9 @@ const query = graphql`
           id
           title
           description
+          icon {
+            url
+          }
         }
       }
     }

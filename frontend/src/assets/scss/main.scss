@@ -10,7 +10,11 @@ body {
   p {
     margin: 0;
     padding: 0;
+    color: $primaryText;
   }
+}
+main {
+  min-height: calc(100vh - 444px);
 }
 
 .container {
@@ -25,6 +29,12 @@ body {
 .swiper-container {
   display: flex;
   flex-direction: column-reverse;
+  .swiper-slide {
+    img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
 }
 
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
@@ -36,15 +46,14 @@ body {
   gap: 10px;
 }
 
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: $active;
-  border: 6px solid $deepDarkBackground;
-  box-shadow: 0 0 0 1px $active;
-}
-
 span.swiper-pagination-bullet {
   padding: 3.5px;
   background: rgba($active, 0.3);
   border-radius: 50%;
   cursor: pointer;
+  &.swiper-pagination-bullet-active {
+    background: $active;
+    border: 6px solid $deepDarkBackground;
+    box-shadow: 0 0 0 1px $active;
+  }
 }

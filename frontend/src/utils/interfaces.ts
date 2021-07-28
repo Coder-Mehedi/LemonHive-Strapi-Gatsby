@@ -7,3 +7,17 @@ export interface IJob {
   Deadline: Date;
   published_at: Date;
 }
+export interface IProject {
+  id: string;
+  image: {
+    url: string;
+  };
+}
+export interface IService {
+  id: string;
+  title: string;
+  description: string;
+  icon: {
+    url: string;
+  };
+}

@@ -12,7 +12,7 @@ interface Props {
 const ServiceItem = ({ serviceTitle, description, imageSrc }: Props) => {
   return (
     <div className={styles.serviceContainer}>
-      <img src={imageSrc} alt='Code Icon' />
+      <img src={imageSrc} alt='' />
       <h3>{serviceTitle}</h3>
       <p>{description}</p>
       <Link to='/'>View Details</Link>

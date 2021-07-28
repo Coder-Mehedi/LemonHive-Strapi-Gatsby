@@ -2943,13 +2943,13 @@ var plugins = [{
     "background_color": "#283849",
     "theme_color": "#283849",
     "display": "minimal-ui",
-    "icon": "src/images/favicon.png",
+    "icon": "src/assets/images/lemonhive.png",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "28fa62e8f0df87822482c7d5ad91bed0"
+    "cacheDigest": "560b39d8069e67d59cc463f0c47bc864"
   }
 }, {
   name: 'gatsby-plugin-offline',

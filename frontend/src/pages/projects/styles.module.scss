@@ -1,0 +1,22 @@
+.description {
+  max-width: 570px;
+  margin: 0 auto;
+}
+.projectImageContainer {
+  display: grid;
+  width: 800px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 0px;
+  padding: 100px 0 150px;
+  img {
+    border-radius: 10px;
+    &:nth-child(even) {
+      position: relative;
+      top: 50px;
+    }
+  }
+}
+section.projects {
+  background: $darkBackground;
+}

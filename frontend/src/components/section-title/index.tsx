@@ -5,6 +5,7 @@ import * as styles from './styles.module.scss';
 interface Props {
   children: ReactNode;
   center?: boolean;
+  className?: string;
 }
 
 const SectionTitle = ({ children, center }: Props) => {
@@ -21,9 +22,13 @@ SectionTitle.Primary = ({ children, center }: Props) => {
     </h1>
   );
 };
-SectionTitle.Secondary = ({ children, center }: Props) => {
+SectionTitle.Secondary = ({ children, center, className }: Props) => {
   return (
-    <p className={`${styles.secondaryTitle} ${center && styles.center}`}>
+    <p
+      className={`${styles.secondaryTitle} ${
+        center && styles.center
+      } ${className}`}
+    >
       {children}
     </p>
   );

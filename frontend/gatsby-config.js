@@ -10,14 +10,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: process.env.API_URL || 'http://localhost:1337',
-        collectionTypes: ['service', 'job'],
+        collectionTypes: ['service', 'job', 'project'],
         singleTypes: [`homepage`, `global`],
         queryLimit: 1000,
       },
@@ -34,7 +34,7 @@ module.exports = {
         background_color: `#283849`,
         theme_color: `#283849`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        icon: `src/assets/images/lemonhive.png`,
       },
     },
     'gatsby-plugin-offline',
