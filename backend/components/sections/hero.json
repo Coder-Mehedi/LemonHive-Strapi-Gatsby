@@ -13,6 +13,12 @@
     },
     "description": {
       "type": "text"
+    },
+    "action_button_text": {
+      "type": "string"
+    },
+    "action_button_url": {
+      "type": "string"
     }
   }
 }

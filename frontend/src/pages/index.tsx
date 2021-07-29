@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
 import '../assets/scss/main.scss';
@@ -24,11 +23,10 @@ const IndexPage = () => {
             <h1>
               We Help Awesome Brands, <span>Find Brilliant Customers</span>
             </h1>
-            <p>
-              Lemon Hive is a marketing agency for ambitious companies who want
-              to accelerate their growth.
-            </p>
-            <Button className={styles.aboutUsButton}>About Us</Button>
+            <p>{data.strapiHomepage.hero.description}</p>
+            <Button className={styles.aboutUsButton}>
+              {data.strapiHomepage.hero.action_button_text}
+            </Button>
           </div>
           <div className={styles.bannerImg}>
             <img src={bannerImg} alt='' className={styles.topImage} />
@@ -99,7 +97,11 @@ const query = graphql`
 
     strapiHomepage {
       hero {
+        id
         title
+        description
+        action_button_url
+        action_button_text
       }
       seo {
         metaTitle

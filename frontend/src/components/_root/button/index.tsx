@@ -5,11 +5,14 @@ import * as styles from './styles.module.scss';
 interface Props {
   children: ReactNode;
   className?: string;
+  onClick?: () => {};
 }
 
-const Button = ({ children, className = '' }: Props) => {
+const Button = ({ children, className = '', onClick }: Props) => {
   return (
-    <button className={`${styles.button} ${className}`}>{children}</button>
+    <button onClick={onClick} className={`${styles.button} ${className}`}>
+      {children}
+    </button>
   );
 };
 
