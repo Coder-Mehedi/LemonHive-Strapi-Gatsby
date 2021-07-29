@@ -17,7 +17,7 @@ const IndexPage = () => {
   const data = useStaticQuery(query);
 
   return (
-    <Layout seo={data.strapiHomepage.seo}>
+    <Layout>
       <section className={styles.banner}>
         <div className={styles.hero}>
           <div className={styles.contentArea}>
@@ -104,11 +104,6 @@ const query = graphql`
       seo {
         metaTitle
         metaDescription
-        shareImage {
-          localFile {
-            publicURL
-          }
-        }
       }
     }
   }

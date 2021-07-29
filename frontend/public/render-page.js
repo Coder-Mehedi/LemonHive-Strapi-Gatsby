@@ -2949,7 +2949,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "560b39d8069e67d59cc463f0c47bc864"
+    "cacheDigest": "f55d1c3046c68f5acface45ce4252c1c"
   }
 }, {
   name: 'gatsby-plugin-offline',

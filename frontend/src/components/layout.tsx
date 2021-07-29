@@ -10,31 +10,12 @@ interface Props {
 }
 
 const Layout = ({ children, seo }: Props) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        strapiHomepage {
-          seo {
-            metaTitle
-            metaDescription
-            shareImage {
-              localFile {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={() => (
-      <>
-        <Seo seo={seo} />
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-      </>
-    )}
-  />
+  <>
+    <Seo seo={seo} />
+    <Nav />
+    <main>{children}</main>
+    <Footer />
+  </>
 );
 
 export default Layout;

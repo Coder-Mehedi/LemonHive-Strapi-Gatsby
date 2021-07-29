@@ -40,25 +40,7 @@ const SEO = ({ seo = {} }) => {
         }
       );
     }
-    if (fullSeo.shareImage) {
-      const imageUrl =
-        (process.env.GATSBY_ROOT_URL || 'http://localhost:8000') +
-        fullSeo.shareImage.localFile.publicURL;
-      tags.push(
-        {
-          name: 'image',
-          content: imageUrl,
-        },
-        {
-          property: 'og:image',
-          content: imageUrl,
-        },
-        {
-          name: 'twitter:image',
-          content: imageUrl,
-        }
-      );
-    }
+
     if (fullSeo.article) {
       tags.push({
         property: 'og:type',
@@ -83,7 +65,8 @@ const SEO = ({ seo = {} }) => {
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Staatliches',
+          href:
+            'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap',
         },
         {
           rel: 'stylesheet',
@@ -135,11 +118,6 @@ const query = graphql`
       defaultSeo {
         metaTitle
         metaDescription
-        shareImage {
-          localFile {
-            publicURL
-          }
-        }
       }
     }
   }
