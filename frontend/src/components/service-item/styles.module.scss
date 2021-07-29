@@ -5,6 +5,10 @@
     padding: 20px;
     text-align: center;
   }
+  @include for-size(tablet) {
+    flex: 1 1 30%;
+    padding: 20px;
+  }
   h3 {
     font-size: 1.125rem;
     color: $primaryText;
@@ -25,6 +29,7 @@
     @include for-size(mobile) {
       text-align: left;
       margin-bottom: 10px;
+      text-align: center;
     }
   }
   a {

@@ -12,10 +12,16 @@
       width: 60%;
       margin-left: 20px;
     }
+    @include for-size(tablet) {
+      margin-left: 20px;
+    }
   }
   .navItem {
     @include for-size(mobile) {
       display: none;
+    }
+    @include for-size(tablet) {
+      margin-right: 10px;
     }
     a {
       text-decoration: none;

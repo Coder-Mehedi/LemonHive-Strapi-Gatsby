@@ -13,6 +13,12 @@
   text-decoration: none;
   color: $primaryText;
   position: relative;
+  @include for-size(mobile) {
+    bottom: 0;
+    display: inline-block;
+    margin: 15px;
+    left: 24%;
+  }
 
   &::after {
     content: '';

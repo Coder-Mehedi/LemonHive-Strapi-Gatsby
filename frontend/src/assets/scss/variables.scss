@@ -16,11 +16,7 @@ $secondaryText: rgba(#fff, 0.7);
       @content;
     }
   } @else if $size == tablet {
-    @media (min-width: 600px) {
-      @content;
-    }
-  } @else if $size == tablet {
-    @media (min-width: 900px) {
+    @media (min-width: 768px) {
       @content;
     }
   } @else if $size == desktop {

@@ -9,7 +9,9 @@
   align-items: center;
   position: relative;
   margin: 0 auto;
-  // min-height: calc(100vh);
+  @include for-size(desktop) {
+    min-height: 100vh;
+  }
   .hero {
     display: flex;
     align-items: center;
@@ -27,6 +29,10 @@
         font-size: 1.7rem;
         padding: 0 20px;
       }
+      @include for-size(tablet) {
+        font-size: 1.9rem;
+        padding: 0 20px;
+      }
       span {
         font-weight: 700;
       }
@@ -40,11 +46,21 @@
         padding: 0 20px;
         margin-bottom: 20px;
       }
+      @include for-size(tablet) {
+        font-size: 1rem;
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
     }
     .aboutUsButton {
       @include for-size(mobile) {
         display: block;
         margin: 0 auto 20px;
+      }
+      @include for-size(tablet) {
+        // display: block;
+        // margin: 0 auto 20px;
+        margin-left: 20px;
       }
     }
   }
@@ -52,6 +68,9 @@
   .bannerImg {
     @include for-size(mobile) {
       display: none;
+    }
+    @include for-size(tablet) {
+      margin-right: 20px;
     }
     .topImage {
       z-index: 1;
@@ -71,7 +90,7 @@
 }
 section.services {
   background: #324253;
-  min-height: 585px;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   .container {
@@ -85,7 +104,7 @@ section.services {
 }
 
 section.latestProject {
-  min-height: 832px;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -102,7 +121,10 @@ section.latestProject {
 }
 section.career {
   background: #324253;
-  min-height: 605px;
+  padding: 30px 0;
   display: flex;
   align-items: center;
+  @include for-size(mobile) {
+    min-height: 520px;
+  }
 }

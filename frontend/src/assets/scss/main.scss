@@ -19,18 +19,22 @@ main {
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   height: 100%;
-  @include for-size(mobile) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .swiper-container {
   display: flex;
   flex-direction: column-reverse;
   .swiper-slide {
+    &.swiper-slide-active {
+      @include for-size(mobile) {
+        margin-right: 0 !important;
+      }
+    }
+
     img {
       height: 400px;
       object-fit: cover;
@@ -53,6 +57,7 @@ span.swiper-pagination-bullet {
   background: rgba($active, 0.3);
   border-radius: 50%;
   cursor: pointer;
+
   &.swiper-pagination-bullet-active {
     background: $active;
     border: 6px solid $deepDarkBackground;

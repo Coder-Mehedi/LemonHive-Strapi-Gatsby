@@ -6,6 +6,10 @@
     text-align: center;
     margin-top: 20px;
   }
+  @include for-size(tablet) {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
 }
 .primaryTitle {
   font-size: 2.813rem;
@@ -19,6 +23,9 @@
     text-align: center;
     margin: 0;
   }
+  @include for-size(tablet) {
+    margin-left: 20px;
+  }
 }
 .secondaryTitle {
   font-size: 1rem;
@@ -27,6 +34,10 @@
   @include for-size(mobile) {
     text-align: center;
     padding-bottom: 20px;
+    padding: 0 20px 20px;
+  }
+  @include for-size(tablet) {
+    margin-left: 20px;
   }
 }
 .center {

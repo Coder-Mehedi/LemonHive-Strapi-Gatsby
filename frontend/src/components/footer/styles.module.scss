@@ -1,5 +1,7 @@
 .footer {
-  height: 344px;
+  @include for-size(desktop) {
+    height: 344px;
+  }
   .footerContent {
     background-image: url('../../assets/images/footerBg.png');
     background-repeat: no-repeat;
@@ -10,6 +12,22 @@
     align-items: center;
     grid-template-columns: 423px auto;
     gap: 78px;
+    @include for-size(mobile) {
+      grid-template-columns: 1fr;
+      margin: 0 20px;
+      gap: 25px;
+      padding: 25px 0;
+    }
+    @include for-size(tablet) {
+      gap: 25px;
+      padding: 30px 20px;
+      grid-template-columns: 350px auto;
+    }
+    @include for-size(desktop) {
+      padding: 0;
+      grid-template-columns: 423px auto;
+      gap: 78px;
+    }
     p {
       color: $secondaryText;
       margin-top: 20px;
@@ -21,6 +39,11 @@
       flex-direction: column;
       flex-wrap: wrap;
       height: 145px;
+      @include for-size(mobile) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
       a {
         text-decoration: none;
         color: $secondaryText;

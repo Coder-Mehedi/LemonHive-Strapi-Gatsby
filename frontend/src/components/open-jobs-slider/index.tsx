@@ -14,7 +14,7 @@ const OpenJobsSlider = () => {
   const data = useStaticQuery(query);
 
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <Swiper
         pagination={{ clickable: true }}
         className='mySwiper'
@@ -33,7 +33,7 @@ const OpenJobsSlider = () => {
           },
           // when window width is >= 640px
           640: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
           },
           1365: {
