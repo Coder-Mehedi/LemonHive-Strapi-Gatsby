@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "menus",
+  "info": {
+    "name": "menu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "menu_item": {
+      "type": "dynamiczone",
+      "components": [
+        "menu.link"
+      ]
+    }
+  }
+}

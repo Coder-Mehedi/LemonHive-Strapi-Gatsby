@@ -29,3 +29,10 @@ export interface ITeamMember {
     url: string;
   };
 }
+
+export interface IMenuItem {
+  id: number;
+  label: string;
+  url: string;
+  strapi_component: string;
+}

@@ -1,38 +1,50 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import logo from '../../assets/images/logo.png';
 import * as styles from './styles.module.scss';
+import { useStaticQuery } from 'gatsby';
+import { IMenuItem } from '../../utils/interfaces';
+import { getFullImageUrl } from '../../utils/getFullImageUrl';
 
-const Nav = () => (
-  <nav className={styles.nav}>
-    <Link to='/' activeClassName={styles.active}>
-      <img src={logo} alt='logo' />
-    </Link>
+const Nav = () => {
+  const data = useStaticQuery(query);
 
-    <div className={styles.navItem}>
-      <Link to='/' activeClassName={styles.active}>
-        Home
-      </Link>
-      <Link activeClassName={styles.active} to='/about'>
-        About
-      </Link>
-      <Link activeClassName={styles.active} to='/services'>
-        Services
-      </Link>
-      <Link activeClassName={styles.active} to='/projects'>
-        Projects
-      </Link>
-      <Link activeClassName={styles.active} to='/teams'>
-        Teams
-      </Link>
-      <Link activeClassName={styles.active} to='/blog'>
-        Blog
-      </Link>
-      <Link activeClassName={styles.active} to='/contact'>
-        Contact
-      </Link>
-    </div>
-  </nav>
-);
+  return (
+    <nav className={styles.nav}>
+      {/* <Link to='/' activeClassName={styles.active}>
+        <img src={getFullImageUrl(data.strapiGlobal.logo.url)} alt='logo' />
+      </Link> */}
+
+      <div className={styles.navItem}>
+        {data.allStrapiMenu.edges[0].node.menu_item.map(
+          (menuItem: IMenuItem) => (
+            <Link to={menuItem.url} activeClassName={styles.active}>
+              {menuItem.label}
+            </Link>
+          )
+        )}
+      </div>
+    </nav>
+  );
+};
+
+const query = graphql`
+  query {
+    allStrapiMenu {
+      edges {
+        node {
+          id
+          menu_item
+        }
+      }
+    }
+    # strapiGlobal {
+    #   id
+    #   logo {
+    #     url
+    #   }
+    # }
+  }
+`;
 
 export default Nav;

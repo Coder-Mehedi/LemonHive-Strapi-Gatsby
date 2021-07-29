@@ -1,9 +1,4 @@
-.fullContainer {
-  width: 100vw;
-}
-
 .banner {
-  // width: 1170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,14 +19,17 @@
     max-width: 507px;
     h1 {
       color: $primaryText;
-      font-size: 2.813rem;
+
       @include for-size(mobile) {
         font-size: 1.7rem;
         padding: 0 20px;
       }
       @include for-size(tablet) {
-        font-size: 1.9rem;
+        font-size: 2rem;
         padding: 0 20px;
+      }
+      @include for-size(desktop) {
+        font-size: 2.813rem;
       }
       span {
         font-weight: 700;
@@ -55,11 +53,10 @@
     .aboutUsButton {
       @include for-size(mobile) {
         display: block;
-        margin: 0 auto 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
       }
       @include for-size(tablet) {
-        // display: block;
-        // margin: 0 auto 20px;
         margin-left: 20px;
       }
     }
