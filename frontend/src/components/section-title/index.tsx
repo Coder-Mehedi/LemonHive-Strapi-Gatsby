@@ -15,9 +15,13 @@ const SectionTitle = ({ children, center }: Props) => {
     </h6>
   );
 };
-SectionTitle.Primary = ({ children, center }: Props) => {
+SectionTitle.Primary = ({ children, center, className }: Props) => {
   return (
-    <h1 className={`${styles.primaryTitle} ${center && styles.center}`}>
+    <h1
+      className={`${styles.primaryTitle} ${
+        center && styles.center
+      } ${className}`}
+    >
       {children}
     </h1>
   );
