@@ -10,6 +10,8 @@ $secondaryTheme: #ffdd00;
 $primaryText: #fff;
 $secondaryText: rgba(#fff, 0.7);
 
+$inputBorder: #d5d4b6;
+
 @mixin for-size($size) {
   @if $size == mobile {
     @media (max-width: 767px) {

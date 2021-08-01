@@ -1,0 +1,114 @@
+section.pageTitle {
+  padding: 30px 0 10px;
+}
+.yellowArea {
+  height: 184px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  // flex-direction: column;
+  background: $secondaryTheme;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h3,
+  p {
+    color: $deepDarkBackground;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .sendUsButton {
+    background: $deepDarkBackground;
+    color: $primaryText;
+    padding: 19px 64px;
+    font-size: 1.125rem;
+  }
+}
+.textArea {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px 0;
+  background: #fff9ce;
+  border-radius: 20px;
+  min-height: 600px;
+  img {
+    border-radius: 20px 0px 0px 20px;
+  }
+  .formArea {
+    flex: 1;
+
+    h3,
+    p {
+      color: $deepDarkBackground;
+      padding: 0 75px;
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      padding: 0 75px;
+      input {
+        font-family: 'Roboto Slab', serif;
+
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid $inputBorder;
+        border-radius: 6px;
+        outline: none;
+        &::placeholder {
+          color: rgba($deepDarkBackground, 0.3);
+        }
+
+        &:focus {
+          border: 1px solid $active;
+        }
+      }
+      .textMessageArea {
+        font-family: 'Roboto Slab', serif;
+
+        min-height: 120px;
+        border: 1px solid $inputBorder;
+        border-radius: 6px;
+        outline: none;
+        padding: 15px;
+        resize: none;
+        margin-bottom: 20px;
+        &:focus {
+          border: 1px solid $active;
+        }
+        &::placeholder {
+          color: rgba($deepDarkBackground, 0.3);
+        }
+      }
+      .submitButton {
+        padding: 14.5px;
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .mapImage {
+    flex: 1;
+  }
+}
